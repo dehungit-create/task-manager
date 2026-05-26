@@ -23,6 +23,7 @@
 
   html, body {
     height: 100%;
+    font-size: 14px;
     /* 3. Thêm font chữ tùy chỉnh nếu cần */
   }
 
@@ -39,6 +40,8 @@
 
   input, button, textarea, select {
     font: inherit;
+    border: none;
+    outline: none;
   }
 
   button {
@@ -67,6 +70,11 @@
     background-color: var(--bg-primary);
     color: var(--text-primary);
     transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
   }
 }
 

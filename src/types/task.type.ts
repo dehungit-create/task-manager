@@ -7,7 +7,7 @@ export interface Task {
   description?: string;
   order: number; // Thuộc tính để sắp xếp task và làm Drag and Drop dễ dàng hơn
   createdAt: Date;
-  dueDate?: Date;
+  dueDate?: string;
   dueTime?: string; // Định dạng "HH:mm"
   isImportant: boolean;
   isCompleted: boolean;
@@ -37,5 +37,9 @@ export interface TaskState {
 
   // Sắp xếp lại thứ tự task khi kéo thả
   reorderTasks: (reorderTasks: Task[]) => void; 
+
+  isAddTaskModelOpen: boolean;
+  openModal: () => void;
+  closeModal: () => void;
 }
 //==============================
